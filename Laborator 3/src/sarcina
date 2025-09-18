@@ -1,0 +1,5 @@
+Creați o fereastră de 400x200 pixeli cu titlul „TextField și Butoane Multiple”.
+Adăugați un JTextField și două butoane: „Text A” și „Text B”. La apăsarea
+butonului „Text A”, textul din JTextField trebuie să fie „Text A”.
+La apăsarea butonului „Text B”, textul din JTextField trebuie să fie „
+Text B”. Afișați textul actual într-un JLabel.
