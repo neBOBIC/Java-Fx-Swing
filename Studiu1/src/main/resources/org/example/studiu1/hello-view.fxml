@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.studiu1.HelloController"
+      spacing="10" alignment="CENTER">
+
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <Label fx:id="welcomeText" text="Welcome!"/>
+
+    <TabPane fx:id="tabPane" prefWidth="800" prefHeight="600">
+
+        <Tab text="Images">
+            <BorderPane>
+                <center>
+                    <ImageView fx:id="imageView" fitWidth="400" fitHeight="300" preserveRatio="true"/>
+                </center>
+                <right>
+                    <VBox spacing="10">
+                        <padding>
+                            <Insets top="10" right="10" bottom="10" left="10"/>
+                        </padding>
+                        <Label text="Images:"/>
+                        <ListView fx:id="listView"/>
+                        <Label text="Zoom:"/>
+                        <Slider fx:id="zoomSlider" min="100" max="600" value="400"/>
+                    </VBox>
+                </right>
+                <bottom>
+                    <HBox spacing="10">
+                        <padding>
+                            <Insets top="10" right="10" bottom="10" left="10"/>
+                        </padding>
+                        <Button fx:id="prevBtn" text="Prev"/>
+                        <Button fx:id="nextBtn" text="Next"/>
+                        <Button fx:id="folderBtn" text="Open Folder"/>
+                    </HBox>
+                </bottom>
+            </BorderPane>
+        </Tab>
+
+        <Tab text="Draw">
+            <AnchorPane fx:id="drawingPane" prefWidth="800" prefHeight="600"/>
+        </Tab>
+
+        <Tab text="Animation">
+            <AnchorPane fx:id="animationPane" prefWidth="800" prefHeight="600"/>
+        </Tab>
+
+        <Tab text="Login">
+            <GridPane hgap="10" vgap="10">
+                <padding>
+                    <Insets top="10" right="10" bottom="10" left="10"/>
+                </padding>
+                <Label text="User:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="userField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                <Label text="Password:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <PasswordField fx:id="passField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                <Button fx:id="loginBtn" text="Login" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <Label fx:id="statusLabel" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            </GridPane>
+        </Tab>
+
+    </TabPane>
+</VBox>
