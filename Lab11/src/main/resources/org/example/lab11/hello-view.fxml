@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.lab11.HelloController">
+
+    <top>
+        <HBox spacing="15" alignment="CENTER_LEFT">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+
+            <Label text="Sarcina 2: Căi și curbe personalizate"
+                   style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+            <CheckBox fx:id="cbDotted" text="Linie punctată" selected="true"/>
+            <Button fx:id="btnReset" text="Resetare"/>
+            <Button fx:id="btnRandom" text="Puncte random"/>
+        </HBox>
+    </top>
+
+    <center>
+        <Canvas fx:id="canvas" width="900" height="520" BorderPane.alignment="CENTER"/>
+    </center>
+
+</BorderPane>
